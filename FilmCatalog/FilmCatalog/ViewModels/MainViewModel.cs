@@ -1,77 +1,29 @@
 ﻿using FilmCatalog.Helpers;
-using FilmCatalog.Models;
 using GalaSoft.MvvmLight;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace FilmCatalog.ViewModels
 {
     class MainViewModel : ViewModelBase
     {
-        private bool _isStarted = false;
-        private int _calculationNumber = 1;
+        private ViewModelBase _selectedViewModel;
+        private RelayCommand _updateViewCommand;
 
-        private RelayCommand _startCalculationCommand;
-        private RelayCommand _endCalculationCommand;
-
-        public bool IsStarted
+        public ViewModelBase SelectedViewModel
         {
-            get => _isStarted;
-            set => Set(ref _isStarted, value);
+            get => _selectedViewModel;
+            set => Set(ref _selectedViewModel, value);
         }
 
-        public int CalculationNumber
-        {
-            get => _calculationNumber;
-            set => Set(ref _calculationNumber, value);
-        }
-
-        public RelayCommand StartCalculationCommand
+        public RelayCommand UpdateViewCommand
         {
             get
             {
-                return _startCalculationCommand ?? (
-                    _startCalculationCommand = new RelayCommand(StartCalculationAsync)
+                return _updateViewCommand ?? (
+                    _updateViewCommand = new RelayCommand(SetHomePage)
                     );
             }
         }
 
-        public RelayCommand EndCalculationCommand
-        {
-            get
-            {
-                return _endCalculationCommand ?? (
-                    _endCalculationCommand = new RelayCommand(StopCalculation)
-                    );
-            }
-        }
-
-        private async void StartCalculationAsync(object obj)
-        {
-            IsStarted = true;
-            await Task.Run(() => DoCalculation());
-        }
-
-        private void StopCalculation(object obj)
-        {
-            IsStarted = false;
-        }
-
-        private void DoCalculation()
-        {
-            while (IsStarted)
-            {
-                CalculationNumber++;
-                Thread.Sleep(1000);
-            }
-        }
-
-        public MainViewModel()
-        {
-            using (var db = new ApplicationContext())
-            {
-                // do some
-            }
-        }
+        private void SetHomePage(object commandParameter) => SelectedViewModel = new UserFilmsViewModel();
     }
 }
