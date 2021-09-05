@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\App.xaml
-5-1292024023
+628148302
 
-13989145825
-224-220987396
-MainWindow.xaml;Resources\Localization\EnglishLocalization.xaml;Resources\PageStyles.xaml;Resources\ViewModelToViews.xaml;Views\UserFilmsView.xaml;
+161579354241
+226833428371
+MainWindow.xaml;Resources\Localization\EnglishLocalization.xaml;Resources\PageStyles.xaml;Resources\ViewModelToViews.xaml;Views\AuthorizationWindow.xaml;Views\UserFilmsView.xaml;
 
 False
 

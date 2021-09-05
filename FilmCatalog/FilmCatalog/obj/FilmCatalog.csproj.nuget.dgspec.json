@@ -49,6 +49,14 @@
               "target": "Package",
               "version": "[2.0.6, )"
             },
+            "Dragablz": {
+              "target": "Package",
+              "version": "[0.0.3.203, )"
+            },
+            "MaterialDesignExtensions": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            },
             "MaterialDesignThemes": {
               "target": "Package",
               "version": "[3.1.2, )"

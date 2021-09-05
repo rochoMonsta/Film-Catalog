@@ -6,7 +6,7 @@
     xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewmodels="clr-namespace:FilmCatalog.ViewModels"
     d1p1:Ignorable="d"
-    StartupUri="MainWindow.xaml">
+    StartupUri="/Views/AuthorizationWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <viewmodels:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
@@ -14,10 +14,13 @@
                 <ResourceDictionary Source="/Resources/PageStyles.xaml" />
                 <ResourceDictionary Source="/Resources/ViewModelToViews.xaml" />
                 <ResourceDictionary Source="/Resources/Localization/EnglishLocalization.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/Generic.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignExtensions;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignExtensions;component/Themes/MaterialDesignLightTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

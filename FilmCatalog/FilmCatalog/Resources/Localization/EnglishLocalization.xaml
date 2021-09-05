@@ -6,4 +6,10 @@
     <sys:String x:Key="MainViewButtonStart">Start</sys:String>
     <sys:String x:Key="MainViewButtonEnd">End</sys:String>
 
+    <sys:String x:Key="AuthorizationUserLogin">User Login</sys:String>
+    <sys:String x:Key="AuthorizationUserRegistration">User Registration</sys:String>
+    <sys:String x:Key="AuthorizationUserLoginHint">Enter username</sys:String>
+    <sys:String x:Key="AuthorizationUserLoginButton">Login</sys:String>
+    <sys:String x:Key="AuthorizationUserCloseButtonToolTip">Close</sys:String>
+
 </ResourceDictionary>

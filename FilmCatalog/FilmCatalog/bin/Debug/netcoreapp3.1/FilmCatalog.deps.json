@@ -9,6 +9,8 @@
       "FilmCatalog/1.0.0": {
         "dependencies": {
           "CommonServiceLocator": "2.0.6",
+          "Dragablz": "0.0.3.203",
+          "MaterialDesignExtensions": "2.0.1",
           "MaterialDesignThemes": "3.1.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.18",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.18",
@@ -27,11 +29,35 @@
           }
         }
       },
+      "Dragablz/0.0.3.203": {
+        "runtime": {
+          "lib/net45/Dragablz.dll": {
+            "assemblyVersion": "0.0.3.203",
+            "fileVersion": "0.0.3.203"
+          }
+        }
+      },
       "MaterialDesignColors/1.2.5": {
         "runtime": {
           "lib/netcoreapp3.1/MaterialDesignColors.dll": {
             "assemblyVersion": "1.2.5.1465",
             "fileVersion": "1.2.5.1465"
+          }
+        }
+      },
+      "MaterialDesignExtensions/2.0.1": {
+        "dependencies": {
+          "MaterialDesignThemes": "3.1.2"
+        },
+        "runtime": {
+          "lib/net45/MaterialDesignExtensions.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        },
+        "resources": {
+          "lib/net45/de/MaterialDesignExtensions.resources.dll": {
+            "locale": "de"
           }
         }
       },
@@ -1072,12 +1098,26 @@
       "path": "commonservicelocator/2.0.6",
       "hashPath": "commonservicelocator.2.0.6.nupkg.sha512"
     },
+    "Dragablz/0.0.3.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bhfclqJCCwQ1MJgFtz2lAIK2xc1yhGLkEenCG4Y+Vt8Tf/7Hn/r64MGH9iEgkEjESOUSKbejs1sKjimepMj56w==",
+      "path": "dragablz/0.0.3.203",
+      "hashPath": "dragablz.0.0.3.203.nupkg.sha512"
+    },
     "MaterialDesignColors/1.2.5": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-RrgpDKLrU3j++fIeKc3wnYZUbIvgVjVQEttIyCvIV4/UyOnnDvRXGw2FjMJFvHIArRI6gBYS3hcZBP3mjVuOng==",
       "path": "materialdesigncolors/1.2.5",
       "hashPath": "materialdesigncolors.1.2.5.nupkg.sha512"
+    },
+    "MaterialDesignExtensions/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uwr1bVcXuf0gBDEvg7nRnDkLpJCZYeOK9brwkwVJIbd+FbPUega1rKXDJ1C8AUUGWI2cc39wPbCfOoOYzpJuEQ==",
+      "path": "materialdesignextensions/2.0.1",
+      "hashPath": "materialdesignextensions.2.0.1.nupkg.sha512"
     },
     "MaterialDesignThemes/3.1.2": {
       "type": "package",

@@ -5,7 +5,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Title="MainWindow"
     Width="1080"
     Height="600"
     DataContext="{Binding MainViewModel, Source={StaticResource Locator}}"
@@ -37,24 +36,18 @@
             <BeginStoryboard Storyboard="{StaticResource CloseMenu}" />
         </EventTrigger>
     </Window.Triggers>
-    <Grid Background="#FFDEDEDE">
+    <Grid Background="White">
         <ContentControl Margin="70,60,0,0" Content="{Binding SelectedViewModel}" />
         <Grid
             x:Name="GridMain"
             Width="1010"
             Height="540"
             HorizontalAlignment="Right"
-            VerticalAlignment="Bottom" />
+            VerticalAlignment="Bottom"/>
         <Grid
             Height="60"
             VerticalAlignment="Top"
-            Background="#FF5C99D6">
-            <Grid.Effect>
-                <DropShadowEffect
-                    BlurRadius="1"
-                    ShadowDepth="1"
-                    Color="#FFACACAC" />
-            </Grid.Effect>
+            Background="#ad49d6">
             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                 <TextBlock
                     VerticalAlignment="Center"
@@ -86,7 +79,7 @@
             x:Name="GridMenu"
             Width="70"
             HorizontalAlignment="Left"
-            Background="#FF31577E">
+            Background="#690094">
             <StackPanel>
                 <Grid
                     Height="150"
@@ -110,7 +103,7 @@
                         Background="{x:Null}"
                         BorderBrush="{x:Null}"
                         Click="ButtonOpenMenu_Click"
-                        Foreground="#FF31577E">
+                        Foreground="#690094" Cursor="Hand">
                         <materialDesign:PackIcon
                             Width="25"
                             Height="25"
@@ -126,7 +119,7 @@
                         Background="{x:Null}"
                         BorderBrush="{x:Null}"
                         Click="ButtonCloseMenu_Click"
-                        Foreground="#FF31577E"
+                        Foreground="#690094"
                         Visibility="Collapsed">
                         <materialDesign:PackIcon
                             Width="25"
@@ -138,7 +131,7 @@
                 </Grid>
                 <ListView
                     x:Name="ListViewMenu"
-                    Foreground="#FF5C99D6"
+                    Foreground="#ad49d6"
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListViewItem x:Name="ItemHome" Height="60">
                         <Button
@@ -152,12 +145,12 @@
                                 </Grid.ColumnDefinitions>
                                 <materialDesign:PackIcon
                                     Grid.Column="0"
-                                    Foreground="#FF5C99D6"
+                                    Foreground="#ad49d6"
                                     Kind="home"
                                     Style="{StaticResource NavMenuIcon}" />
                                 <TextBlock
                                     Grid.Column="1"
-                                    Foreground="#FF5C99D6"
+                                    Foreground="#ad49d6"
                                     Style="{StaticResource NavManuTextBlock}"
                                     Text="Home" />
                             </Grid>
