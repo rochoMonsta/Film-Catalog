@@ -13,7 +13,7 @@ namespace FilmCatalog.Views
             _authorizationViewModel = (AuthorizationViewModel)DataContext;
         }
 
-        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
             {

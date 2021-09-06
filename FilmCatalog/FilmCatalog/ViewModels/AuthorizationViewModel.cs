@@ -16,6 +16,7 @@ namespace FilmCatalog.ViewModels
         private RelayCommand _registerCommand;
         private ApplicationContext _applicationContext;
         private DBService _dataBaseService;
+        public DataStore DataStore { get; set; }
 
         public string UserLogin
         {
@@ -59,6 +60,7 @@ namespace FilmCatalog.ViewModels
             if (user != null)
             {
                 IsSuccessd = true;
+                DataStore.GetDataStore().CurrentUser = user;
             }
         }
 
@@ -73,6 +75,7 @@ namespace FilmCatalog.ViewModels
                     if (user != null)
                     {
                         IsSuccessd = true;
+                        DataStore.GetDataStore().CurrentUser = user;
                     }
                 }
             }

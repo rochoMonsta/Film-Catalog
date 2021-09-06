@@ -17,4 +17,10 @@
     <sys:String x:Key="AuthorizationRegisterButton">Register</sys:String>
     <sys:String x:Key="AuthorizationUserCloseButtonToolTip">Close</sys:String>
 
+    <sys:String x:Key="MainWindowSettings">Settings</sys:String>
+    <sys:String x:Key="MainWindowAccount">Account</sys:String>
+    <sys:String x:Key="MainWindowHelp">Help</sys:String>
+    <sys:String x:Key="MainWindowLogout">Logout</sys:String>
+    <sys:String x:Key="MainWindowExit">Exit</sys:String>
+
 </ResourceDictionary>

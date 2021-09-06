@@ -74,3 +74,4 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmC
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.pdb
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.genruntimeconfig.cache
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.csproj.AssemblyReference.cache

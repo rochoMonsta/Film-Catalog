@@ -43,28 +43,130 @@
             Width="1010"
             Height="540"
             HorizontalAlignment="Right"
-            VerticalAlignment="Bottom"/>
+            VerticalAlignment="Bottom" />
         <Grid
             Height="60"
             VerticalAlignment="Top"
-            Background="#ad49d6">
+            Background="{DynamicResource PurpleC}">
             <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                 <TextBlock
                     VerticalAlignment="Center"
                     FontSize="16"
                     Foreground="White"
-                    Text="Username here" />
+                    Text="{Binding CurrentUser.UserName, Mode=OneWay}" />
                 <materialDesign:PopupBox
                     Margin="10"
                     Foreground="White"
                     PlacementMode="BottomAndAlignRightEdges"
-                    StaysOpen="False">
+                    StaysOpen="True">
                     <StackPanel Width="150">
-                        <Button Content="Settings" />
-                        <Button Content="Account" />
-                        <Button Content="Help" />
+                        <Button Padding="20,0,0,0" VerticalContentAlignment="Center">
+                            <Button.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.75*" />
+                                    </Grid.ColumnDefinitions>
+                                    <materialDesign:PackIcon
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource PurpleC}"
+                                        Kind="Account"
+                                        Style="{StaticResource DefaultIcon}" />
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        Style="{StaticResource DefaultTextBlock}"
+                                        Text="{DynamicResource MainWindowAccount}" />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                        <Button Padding="20,0,0,0" VerticalContentAlignment="Center">
+                            <Button.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.75*" />
+                                    </Grid.ColumnDefinitions>
+                                    <materialDesign:PackIcon
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource PurpleC}"
+                                        Kind="Settings"
+                                        Style="{StaticResource DefaultIcon}" />
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        Style="{StaticResource DefaultTextBlock}"
+                                        Text="{DynamicResource MainWindowSettings}" />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                        <Button Padding="20,0,0,0" VerticalContentAlignment="Center">
+                            <Button.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.75*" />
+                                    </Grid.ColumnDefinitions>
+                                    <materialDesign:PackIcon
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource PurpleC}"
+                                        Kind="Help"
+                                        Style="{StaticResource DefaultIcon}" />
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        Style="{StaticResource DefaultTextBlock}"
+                                        Text="{DynamicResource MainWindowHelp}" />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
                         <Separator />
-                        <Button Content="Logout" />
+                        <Button
+                            Padding="20,0,0,0"
+                            VerticalContentAlignment="Center"
+                            Command="{Binding LogoutCommand}">
+                            <Button.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.75*" />
+                                    </Grid.ColumnDefinitions>
+                                    <materialDesign:PackIcon
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource PurpleC}"
+                                        Kind="Logout"
+                                        Style="{StaticResource DefaultIcon}" />
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        Style="{StaticResource DefaultTextBlock}"
+                                        Text="{DynamicResource MainWindowLogout}" />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                        <Button
+                            Padding="20,0,0,0"
+                            VerticalContentAlignment="Center"
+                            Command="{Binding ShutDownApplicationCommand}">
+                            <Button.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.25*" />
+                                        <ColumnDefinition Width="0.75*" />
+                                    </Grid.ColumnDefinitions>
+                                    <materialDesign:PackIcon
+                                        Grid.Column="0"
+                                        Foreground="{DynamicResource PurpleC}"
+                                        Kind="ExitRun"
+                                        Style="{StaticResource DefaultIcon}" />
+                                    <TextBlock
+                                        Grid.Column="1"
+                                        Margin="10,0,0,0"
+                                        Style="{StaticResource DefaultTextBlock}"
+                                        Text="{DynamicResource MainWindowExit}" />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
                     </StackPanel>
                 </materialDesign:PopupBox>
             </StackPanel>
@@ -79,7 +181,7 @@
             x:Name="GridMenu"
             Width="70"
             HorizontalAlignment="Left"
-            Background="#690094">
+            Background="{DynamicResource PurpleHoverC}">
             <StackPanel>
                 <Grid
                     Height="150"
@@ -103,7 +205,8 @@
                         Background="{x:Null}"
                         BorderBrush="{x:Null}"
                         Click="ButtonOpenMenu_Click"
-                        Foreground="#690094" Cursor="Hand">
+                        Cursor="Hand"
+                        Foreground="{DynamicResource PurpleHoverC}">
                         <materialDesign:PackIcon
                             Width="25"
                             Height="25"
@@ -119,7 +222,8 @@
                         Background="{x:Null}"
                         BorderBrush="{x:Null}"
                         Click="ButtonCloseMenu_Click"
-                        Foreground="#690094"
+                        Cursor="Hand"
+                        Foreground="{DynamicResource PurpleHoverC}"
                         Visibility="Collapsed">
                         <materialDesign:PackIcon
                             Width="25"
@@ -131,7 +235,7 @@
                 </Grid>
                 <ListView
                     x:Name="ListViewMenu"
-                    Foreground="#ad49d6"
+                    Foreground="{DynamicResource PurpleC}"
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListViewItem x:Name="ItemHome" Height="60">
                         <Button
@@ -145,12 +249,12 @@
                                 </Grid.ColumnDefinitions>
                                 <materialDesign:PackIcon
                                     Grid.Column="0"
-                                    Foreground="#ad49d6"
+                                    Foreground="{DynamicResource PurpleC}"
                                     Kind="home"
                                     Style="{StaticResource NavMenuIcon}" />
                                 <TextBlock
                                     Grid.Column="1"
-                                    Foreground="#ad49d6"
+                                    Foreground="{DynamicResource PurpleC}"
                                     Style="{StaticResource NavManuTextBlock}"
                                     Text="Home" />
                             </Grid>
