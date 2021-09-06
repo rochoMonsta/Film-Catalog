@@ -9,18 +9,13 @@ namespace FilmCatalog.ViewModels
     class AuthorizationViewModel : ViewModelBase
     {
         private bool _isSuccessd = false;
-        private string _authorizationHeader = (string)Application.Current.Resources["AuthorizationUserLogin"];
         private string _userLogin;
         private string _userPassword;
+        private string _confrimUserPassword;
         private RelayCommand _loginCommand;
+        private RelayCommand _registerCommand;
         private ApplicationContext _applicationContext;
         private DBService _dataBaseService;
-
-        public string AuthorizationHeader
-        {
-            get => _authorizationHeader;
-            set => Set(ref _authorizationHeader, value);
-        }
 
         public string UserLogin
         {
@@ -32,6 +27,12 @@ namespace FilmCatalog.ViewModels
         {
             get => _userPassword;
             set => Set(ref _userPassword, value);
+        }
+
+        public string ConfrimUserPassword
+        {
+            get => _confrimUserPassword;
+            set => Set(ref _confrimUserPassword, value);
         }
 
         public bool IsSuccessd
@@ -47,15 +48,9 @@ namespace FilmCatalog.ViewModels
             _dataBaseService = new DBService(_applicationContext);
         }
 
-        public RelayCommand LoginCommand
-        {
-            get
-            {
-                return _loginCommand ?? (
-                    _loginCommand = new RelayCommand(LoginUser)
-                    );
-            }
-        }
+        public RelayCommand LoginCommand => _loginCommand ?? (_loginCommand = new RelayCommand(LoginUser));
+
+        public RelayCommand RegisterCommand => _registerCommand ?? (_registerCommand = new RelayCommand(RegisterUser));
 
         private void LoginUser(object obj)
         {
@@ -64,6 +59,22 @@ namespace FilmCatalog.ViewModels
             if (user != null)
             {
                 IsSuccessd = true;
+            }
+        }
+
+        private void RegisterUser(object obj)
+        {
+            if (UserPassword.ToLower() == ConfrimUserPassword.ToLower())
+            {
+                if (_dataBaseService.RegisterUser(UserLogin, UserPassword))
+                {
+                    var user = _dataBaseService.GetUser(UserLogin, UserPassword);
+
+                    if (user != null)
+                    {
+                        IsSuccessd = true;
+                    }
+                }
             }
         }
     }

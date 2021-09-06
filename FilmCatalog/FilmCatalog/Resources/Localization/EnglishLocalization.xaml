@@ -9,7 +9,12 @@
     <sys:String x:Key="AuthorizationUserLogin">User Login</sys:String>
     <sys:String x:Key="AuthorizationUserRegistration">User Registration</sys:String>
     <sys:String x:Key="AuthorizationUserLoginHint">Enter username</sys:String>
-    <sys:String x:Key="AuthorizationUserLoginButton">Login</sys:String>
+    <sys:String x:Key="AuthorizationUserPasswordHint">Enter password</sys:String>
+    <sys:String x:Key="AuthorizationUserConfirmPasswordHint">Confirm your password</sys:String>
+    <sys:String x:Key="AuthorizationUserSignInButton">Sign in</sys:String>
+    <sys:String x:Key="AuthorizationUserSignUpButton">Sign up</sys:String>
+    <sys:String x:Key="AuthorizationLoginButton">Login</sys:String>
+    <sys:String x:Key="AuthorizationRegisterButton">Register</sys:String>
     <sys:String x:Key="AuthorizationUserCloseButtonToolTip">Close</sys:String>
 
 </ResourceDictionary>

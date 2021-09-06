@@ -19,5 +19,18 @@ namespace FilmCatalog.Helpers.Services
         {
             return _applicationContext.Users.FirstOrDefault(u => u.Login == login && u.Password == password);
         }
+
+        public bool RegisterUser(string login, string password)
+        {
+            if (!_applicationContext.Users.Any(u => u.Login == login))
+            {
+                _applicationContext.Users.Add(new User() { Login = login, Password = password });
+                _applicationContext.SaveChanges();
+
+                return true;
+            }
+
+            return false;
+        }
     }
 }

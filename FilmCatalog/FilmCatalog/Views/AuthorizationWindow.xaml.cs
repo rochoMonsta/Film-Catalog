@@ -28,8 +28,22 @@ namespace FilmCatalog.Views
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
-            _authorizationViewModel.UserPassword = passwordBox.Password;
+            _authorizationViewModel.UserPassword = passwordLoginBox.Password;
             _authorizationViewModel.LoginCommand.Execute(null);
+
+            if (_authorizationViewModel.IsSuccessd)
+            {
+                var mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+        }
+
+        private void RegisterButtonClick(object sender, RoutedEventArgs e)
+        {
+            _authorizationViewModel.UserPassword = passwordRegisterBox.Password;
+            _authorizationViewModel.ConfrimUserPassword = confirmPasswordRegisterBox.Password;
+            _authorizationViewModel.RegisterCommand.Execute(null);
 
             if (_authorizationViewModel.IsSuccessd)
             {

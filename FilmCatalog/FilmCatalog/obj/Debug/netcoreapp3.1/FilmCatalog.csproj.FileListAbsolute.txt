@@ -5,7 +5,9 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmC
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.pdb
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\CommonServiceLocator.dll
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\Dragablz.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\MaterialDesignExtensions.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -41,6 +43,7 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\Syste
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\de\MaterialDesignExtensions.resources.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
@@ -49,6 +52,7 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\runti
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\MainWindow.baml
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Resources\ColorsResources.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Resources\Localization\EnglishLocalization.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Resources\PageStyles.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\MainWindow.g.cs
@@ -70,7 +74,3 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmC
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.pdb
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.genruntimeconfig.cache
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.csproj.AssemblyReference.cache
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\Dragablz.dll
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\MaterialDesignExtensions.dll
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\de\MaterialDesignExtensions.resources.dll

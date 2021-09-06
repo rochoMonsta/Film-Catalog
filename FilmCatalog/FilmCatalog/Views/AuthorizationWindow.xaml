@@ -17,8 +17,8 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.1, 0" EndPoint="0.9, 1">
-                <GradientStop Offset="1" Color="#690094" />
-                <GradientStop Offset="0" Color="#eeccfc" />
+                <GradientStop Offset="1" Color="{StaticResource PurplePC}" />
+                <GradientStop Offset="0" Color="{StaticResource LightPurplePC}" />
             </LinearGradientBrush>
         </Grid.Background>
         <Border
@@ -35,76 +35,178 @@
                     VerticalAlignment="Top"
                     Source="/Resources/Images/FilmMainPicture.png" />
             </StackPanel>
-            <StackPanel Width="500">
-                <StackPanel Margin="20,40">
-                    <TextBlock Style="{StaticResource AuthorizationHeader}" Text="{Binding AuthorizationHeader, Mode=OneWay}" />
-                    <StackPanel Margin="10" Orientation="Horizontal">
-                        <materialDesign:PackIcon
-                            Width="35"
-                            Height="35"
-                            Foreground="White"
-                            Kind="User" />
-                        <TextBox
-                            Width="405"
-                            Height="35"
-                            Margin="10,0"
-                            VerticalContentAlignment="Center"
-                            materialDesign:HintAssist.Hint="{DynamicResource AuthorizationUserLoginHint}"
-                            BorderBrush="White"
-                            CaretBrush="#690094"
-                            FontFamily="Kayak Sans"
-                            FontSize="16"
-                            Foreground="White"
-                            SelectionBrush="#690094"
-                            Text="{Binding UserLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+            <TabControl
+                Width="500"
+                Margin="0,60,0,0"
+                Style="{StaticResource TabControl}">
+                <TabItem
+                    Width="248"
+                    Header="{DynamicResource AuthorizationUserSignInButton}"
+                    Style="{StaticResource TabItem}">
+                    <StackPanel Margin="20,40">
+                        <StackPanel Margin="10" Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="35"
+                                Height="35"
+                                Foreground="White"
+                                Kind="User" />
+                            <TextBox
+                                Width="405"
+                                Height="35"
+                                Margin="10,0"
+                                VerticalContentAlignment="Center"
+                                materialDesign:HintAssist.Hint="{DynamicResource AuthorizationUserLoginHint}"
+                                BorderBrush="White"
+                                CaretBrush="{DynamicResource PurpleC}"
+                                FontFamily="Kayak Sans"
+                                FontSize="16"
+                                Foreground="White"
+                                SelectionBrush="{DynamicResource PurpleC}"
+                                Text="{Binding UserLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                ToolTip="{DynamicResource AuthorizationUserLoginHint}" />
+                        </StackPanel>
+                        <StackPanel Margin="10" Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="35"
+                                Height="35"
+                                Foreground="White"
+                                Kind="Lock" />
+                            <PasswordBox
+                                Name="passwordLoginBox"
+                                Width="405"
+                                Height="35"
+                                Margin="10,0"
+                                VerticalContentAlignment="Center"
+                                materialDesign:HintAssist.Hint="*****************************"
+                                BorderBrush="White"
+                                CaretBrush="{DynamicResource PurpleC}"
+                                Cursor="IBeam"
+                                FontFamily="Kayak Sans"
+                                FontSize="16"
+                                Foreground="White"
+                                SelectionBrush="{DynamicResource PurpleC}"
+                                ToolTip="{DynamicResource AuthorizationUserPasswordHint}" />
+                        </StackPanel>
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                            <Button
+                                Width="100"
+                                Height="40"
+                                VerticalContentAlignment="Center"
+                                materialDesign:ButtonAssist.CornerRadius="10"
+                                Background="{DynamicResource PurpleC}"
+                                BorderBrush="{DynamicResource PurpleC}"
+                                BorderThickness="2"
+                                Click="LoginButtonClick"
+                                Content="{DynamicResource AuthorizationLoginButton}"
+                                Cursor="Hand"
+                                Foreground="White"
+                                Style="{StaticResource MaterialDesignRaisedButton}" />
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Margin="10" Orientation="Horizontal">
-                        <materialDesign:PackIcon
-                            Width="35"
-                            Height="35"
-                            Foreground="White"
-                            Kind="Lock" />
-                        <PasswordBox
-                            Name="passwordBox"
-                            Width="405"
-                            Height="35"
-                            Margin="10,0"
-                            VerticalContentAlignment="Center"
-                            materialDesign:HintAssist.Hint="*****************************"
-                            BorderBrush="White"
-                            CaretBrush="#690094"
-                            FontFamily="Kayak Sans"
-                            FontSize="16"
-                            Foreground="White"
-                            SelectionBrush="#690094" Cursor="IBeam" />
+                </TabItem>
+                <TabItem
+                    Width="248"
+                    Header="{DynamicResource AuthorizationUserSignUpButton}"
+                    Style="{StaticResource TabItem}">
+                    <StackPanel Margin="20,40">
+                        <StackPanel Margin="10" Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="35"
+                                Height="35"
+                                Foreground="White"
+                                Kind="User" />
+                            <TextBox
+                                Width="405"
+                                Height="35"
+                                Margin="10,0"
+                                VerticalContentAlignment="Center"
+                                materialDesign:HintAssist.Hint="{DynamicResource AuthorizationUserLoginHint}"
+                                BorderBrush="White"
+                                CaretBrush="{DynamicResource PurpleC}"
+                                FontFamily="Kayak Sans"
+                                FontSize="16"
+                                Foreground="White"
+                                SelectionBrush="{DynamicResource PurpleC}"
+                                Text="{Binding UserLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                ToolTip="{DynamicResource AuthorizationUserLoginHint}" />
+                        </StackPanel>
+                        <StackPanel Margin="10" Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="35"
+                                Height="35"
+                                Foreground="White"
+                                Kind="Lock" />
+                            <PasswordBox
+                                Name="passwordRegisterBox"
+                                Width="405"
+                                Height="35"
+                                Margin="10,0"
+                                VerticalContentAlignment="Center"
+                                materialDesign:HintAssist.Hint="*****************************"
+                                BorderBrush="White"
+                                CaretBrush="{DynamicResource PurpleC}"
+                                Cursor="IBeam"
+                                FontFamily="Kayak Sans"
+                                FontSize="16"
+                                Foreground="White"
+                                SelectionBrush="{DynamicResource PurpleC}"
+                                ToolTip="{DynamicResource AuthorizationUserPasswordHint}" />
+                        </StackPanel>
+                        <StackPanel Margin="10" Orientation="Horizontal">
+                            <materialDesign:PackIcon
+                                Width="35"
+                                Height="35"
+                                Foreground="White"
+                                Kind="LockCheck" />
+                            <PasswordBox
+                                Name="confirmPasswordRegisterBox"
+                                Width="405"
+                                Height="35"
+                                Margin="10,0"
+                                VerticalContentAlignment="Center"
+                                materialDesign:HintAssist.Hint="*****************************"
+                                BorderBrush="White"
+                                CaretBrush="{DynamicResource PurpleC}"
+                                Cursor="IBeam"
+                                FontFamily="Kayak Sans"
+                                FontSize="16"
+                                Foreground="White"
+                                SelectionBrush="{DynamicResource PurpleC}"
+                                ToolTip="{DynamicResource AuthorizationUserConfirmPasswordHint}" />
+                        </StackPanel>
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                            <Button
+                                Width="100"
+                                Height="40"
+                                VerticalContentAlignment="Center"
+                                materialDesign:ButtonAssist.CornerRadius="10"
+                                Background="{DynamicResource PurpleC}"
+                                BorderBrush="{DynamicResource PurpleC}"
+                                BorderThickness="2"
+                                Click="RegisterButtonClick"
+                                Content="{DynamicResource AuthorizationRegisterButton}"
+                                Cursor="Hand"
+                                Foreground="White"
+                                Style="{StaticResource MaterialDesignRaisedButton}" />
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Margin="10" HorizontalAlignment="Center">
-                        <Button
-                            Width="100"
-                            Height="40"
-                            VerticalContentAlignment="Center"
-                            materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#992ac7"
-                            BorderBrush="#690094"
-                            BorderThickness="2"
-                            Click="LoginButtonClick"
-                            Content="{DynamicResource AuthorizationUserLoginButton}"
-                            Cursor="Hand"
-                            Foreground="White"
-                            Style="{StaticResource MaterialDesignRaisedButton}" />
-                    </StackPanel>
-                </StackPanel>
-            </StackPanel>
+                </TabItem>
+            </TabControl>
             <StackPanel Width="80">
                 <Button
-                    Height="40"
                     Width="40"
+                    Height="40"
                     Margin="10,20"
                     Background="{x:Null}"
+                    Click="CloseButtonClick"
+                    Cursor="Hand"
                     Style="{StaticResource MaterialDesignFloatingActionButton}"
-                    ToolTip="{DynamicResource AuthorizationUserCloseButtonToolTip}"
-                    Click="CloseButtonClick" Cursor="Hand">
-                    <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30"/>
+                    ToolTip="{DynamicResource AuthorizationUserCloseButtonToolTip}">
+                    <materialDesign:PackIcon
+                        Width="30"
+                        Height="30"
+                        Foreground="White"
+                        Kind="Close" />
                 </Button>
             </StackPanel>
         </StackPanel>

@@ -14,6 +14,7 @@
                 <ResourceDictionary Source="/Resources/PageStyles.xaml" />
                 <ResourceDictionary Source="/Resources/ViewModelToViews.xaml" />
                 <ResourceDictionary Source="/Resources/Localization/EnglishLocalization.xaml" />
+                <ResourceDictionary Source="/Resources/ColorsResources.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/Generic.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />

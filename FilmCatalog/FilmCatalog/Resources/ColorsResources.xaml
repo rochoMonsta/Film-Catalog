@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="PurplePC">#690094</Color>
+    <Color x:Key="BlackGrayPC">#252426</Color>
+    <Color x:Key="BlackPurplePC">#616161</Color>
+    <Color x:Key="PurpleHoverPC">#3a0052</Color>
+    <Color x:Key="LightPurplePC">#eeccfc</Color>
+
+    <SolidColorBrush x:Key="PurpleC" Color="{StaticResource PurplePC}" />
+    <SolidColorBrush x:Key="BlackGrayC" Color="{StaticResource BlackGrayPC}" />
+    <SolidColorBrush x:Key="BlackPurpleC" Color="{StaticResource BlackPurplePC}" />
+    <SolidColorBrush x:Key="PurpleHoverC" Color="{StaticResource PurpleHoverPC}"/>
+    <SolidColorBrush x:Key="LightPurpleC" Color="{StaticResource LightPurplePC}" />
+
+</ResourceDictionary>
