@@ -16,6 +16,8 @@
     <sys:String x:Key="AuthorizationLoginButton">Login</sys:String>
     <sys:String x:Key="AuthorizationRegisterButton">Register</sys:String>
     <sys:String x:Key="AuthorizationUserCloseButtonToolTip">Close</sys:String>
+    <sys:String x:Key="AuthorizationErrorThisUserIsAlreadyRegistered">This user is already registered</sys:String>
+    <sys:String x:Key="AuthorizationErrorIncorrectUsernameOrPassword">Incorrect username or password</sys:String>
 
     <sys:String x:Key="MainWindowSettings">Settings</sys:String>
     <sys:String x:Key="MainWindowAccount">Account</sys:String>

@@ -36,6 +36,7 @@
                     Source="/Resources/Images/FilmMainPicture.png" />
             </StackPanel>
             <TabControl
+                SelectionChanged="TabControlSelectionChanged"
                 Width="500"
                 Margin="0,60,0,0"
                 Style="{StaticResource TabControl}">
@@ -54,14 +55,8 @@
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"
-                                VerticalContentAlignment="Center"
                                 materialDesign:HintAssist.Hint="{DynamicResource AuthorizationUserLoginHint}"
-                                BorderBrush="White"
-                                CaretBrush="{DynamicResource PurpleC}"
-                                FontFamily="Kayak Sans"
-                                FontSize="16"
-                                Foreground="White"
-                                SelectionBrush="{DynamicResource PurpleC}"
+                                Style="{StaticResource AuthorizationTextBox}"
                                 Text="{Binding UserLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 ToolTip="{DynamicResource AuthorizationUserLoginHint}" />
                         </StackPanel>
@@ -76,18 +71,11 @@
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"
-                                VerticalContentAlignment="Center"
-                                materialDesign:HintAssist.Hint="*****************************"
-                                BorderBrush="White"
-                                CaretBrush="{DynamicResource PurpleC}"
-                                Cursor="IBeam"
-                                FontFamily="Kayak Sans"
-                                FontSize="16"
-                                Foreground="White"
-                                SelectionBrush="{DynamicResource PurpleC}"
+                                Style="{StaticResource AuthorizationPasswordBox}"
                                 ToolTip="{DynamicResource AuthorizationUserPasswordHint}" />
                         </StackPanel>
-                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                        <StackPanel HorizontalAlignment="Center">
+                            <Label Content="{Binding ErrorLabelText}" Style="{StaticResource AuthorizationErrorLabel}" />
                             <Button
                                 Width="100"
                                 Height="40"
@@ -119,14 +107,8 @@
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"
-                                VerticalContentAlignment="Center"
                                 materialDesign:HintAssist.Hint="{DynamicResource AuthorizationUserLoginHint}"
-                                BorderBrush="White"
-                                CaretBrush="{DynamicResource PurpleC}"
-                                FontFamily="Kayak Sans"
-                                FontSize="16"
-                                Foreground="White"
-                                SelectionBrush="{DynamicResource PurpleC}"
+                                Style="{StaticResource AuthorizationTextBox}"
                                 Text="{Binding UserLogin, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 ToolTip="{DynamicResource AuthorizationUserLoginHint}" />
                         </StackPanel>
@@ -141,15 +123,7 @@
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"
-                                VerticalContentAlignment="Center"
-                                materialDesign:HintAssist.Hint="*****************************"
-                                BorderBrush="White"
-                                CaretBrush="{DynamicResource PurpleC}"
-                                Cursor="IBeam"
-                                FontFamily="Kayak Sans"
-                                FontSize="16"
-                                Foreground="White"
-                                SelectionBrush="{DynamicResource PurpleC}"
+                                Style="{StaticResource AuthorizationPasswordBox}"
                                 ToolTip="{DynamicResource AuthorizationUserPasswordHint}" />
                         </StackPanel>
                         <StackPanel Margin="10" Orientation="Horizontal">
@@ -163,18 +137,11 @@
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"
-                                VerticalContentAlignment="Center"
-                                materialDesign:HintAssist.Hint="*****************************"
-                                BorderBrush="White"
-                                CaretBrush="{DynamicResource PurpleC}"
-                                Cursor="IBeam"
-                                FontFamily="Kayak Sans"
-                                FontSize="16"
-                                Foreground="White"
-                                SelectionBrush="{DynamicResource PurpleC}"
+                                Style="{StaticResource AuthorizationPasswordBox}"
                                 ToolTip="{DynamicResource AuthorizationUserConfirmPasswordHint}" />
                         </StackPanel>
                         <StackPanel Margin="10" HorizontalAlignment="Center">
+                            <Label Content="{Binding ErrorLabelText}" Style="{StaticResource AuthorizationErrorLabel}" />
                             <Button
                                 Width="100"
                                 Height="40"

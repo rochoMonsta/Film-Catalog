@@ -4,12 +4,13 @@ using FilmCatalog.Helpers.Services;
 using FilmCatalog.Models;
 using GalaSoft.MvvmLight;
 using System.Windows;
+using System.Windows.Media;
 
 namespace FilmCatalog.ViewModels
 {
     class AuthorizationViewModel : ViewModelBase, IBaseViewModel
     {
-        private bool _isSuccessd = false;
+        private bool _isSuccessd = true;
         private string _userLogin;
         private string _userPassword;
         private string _confrimUserPassword;
@@ -17,24 +18,42 @@ namespace FilmCatalog.ViewModels
         private RelayCommand _registerCommand;
         private ApplicationContext _applicationContext;
         private DBService _dataBaseService;
-        public DataStore DataStore { get; set; }
+        private string _errorLabelText;
 
         public string UserLogin
         {
             get => _userLogin;
-            set => Set(ref _userLogin, value);
+            set
+            {
+                Set(ref _userLogin, value);
+                IsSuccessd = true;
+            }
         }
 
         public string UserPassword
         {
             get => _userPassword;
-            set => Set(ref _userPassword, value);
+            set
+            {
+                Set(ref _userPassword, value);
+                IsSuccessd = true;
+            }
         }
 
         public string ConfrimUserPassword
         {
             get => _confrimUserPassword;
-            set => Set(ref _confrimUserPassword, value);
+            set
+            {
+                Set(ref _confrimUserPassword, value);
+                IsSuccessd = true;
+            }
+        }
+
+        public string ErrorLabelText
+        {
+            get => _errorLabelText;
+            set => Set(ref _errorLabelText, value);
         }
 
         public bool IsSuccessd
@@ -63,6 +82,11 @@ namespace FilmCatalog.ViewModels
                 IsSuccessd = true;
                 DataStore.GetDataStore().CurrentUser = user;
             }
+            else
+            {
+                ErrorLabelText = (string)Application.Current.Resources["AuthorizationErrorIncorrectUsernameOrPassword"];
+                IsSuccessd = false;
+            }
         }
 
         private void RegisterUser(object obj)
@@ -78,11 +102,21 @@ namespace FilmCatalog.ViewModels
                         IsSuccessd = true;
                         DataStore.GetDataStore().CurrentUser = user;
                     }
+                    else
+                    {
+                        ErrorLabelText = (string)Application.Current.Resources["AuthorizationErrorThisUserIsAlreadyRegistered"];
+                        IsSuccessd = false;
+                    }
+                }
+                else
+                {
+                    ErrorLabelText = (string)Application.Current.Resources["AuthorizationErrorThisUserIsAlreadyRegistered"];
+                    IsSuccessd = false;
                 }
             }
         }
 
-        private void ClearData()
+        public void ClearData()
         {
             UserLogin = null;
             UserPassword = null;

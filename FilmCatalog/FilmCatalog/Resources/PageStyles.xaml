@@ -3,7 +3,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
-    <Style x:Key="DefaultEndButton" TargetType="Button">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PasswordBox.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+
+    <!--<Style x:Key="DefaultEndButton" TargetType="Button">
         <Setter Property="Background" Value="#DB4437" />
         <Setter Property="Height" Value="60" />
         <Setter Property="Width" Value="200" />
@@ -34,16 +40,18 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <!--<Trigger Property="IsMouseOver" Value="True">
+    -->
+    <!--<Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#b0281c" />
             </Trigger>-->
-            <!--<EventTrigger RoutedEvent="MouseEnter">
+    <!--<EventTrigger RoutedEvent="MouseEnter">
                 <BeginStoryboard>
                     <Storyboard>
                         <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#a31a0f" />
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger>-->
+    <!--
         </Style.Triggers>
         <Style.Resources>
             <Style TargetType="Border">
@@ -83,23 +91,25 @@
             </Setter.Value>
         </Setter>
         <Style.Triggers>
-            <!--<Trigger Property="IsMouseOver" Value="True">
+    -->
+    <!--<Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#b0281c" />
             </Trigger>-->
-            <!--<EventTrigger RoutedEvent="MouseEnter">
+    <!--<EventTrigger RoutedEvent="MouseEnter">
                 <BeginStoryboard>
                     <Storyboard>
                         <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="#a31a0f" />
                     </Storyboard>
                 </BeginStoryboard>
             </EventTrigger>-->
+    <!--
         </Style.Triggers>
         <Style.Resources>
             <Style TargetType="Border">
                 <Setter Property="CornerRadius" Value="15" />
             </Style>
         </Style.Resources>
-    </Style>
+    </Style>-->
 
     <Style x:Key="DefaultButton" TargetType="Button">
         <Setter Property="Background" Value="{x:Null}" />
@@ -143,26 +153,6 @@
         <Setter Property="Margin" Value="20,10" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="VerticalAlignment" Value="Center" />
-    </Style>
-
-    <Style x:Key="AuthorizationHeader" TargetType="TextBlock">
-        <Setter Property="Margin" Value="20" />
-        <Setter Property="Foreground" Value="White" />
-        <Setter Property="TextAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="42" />
-        <Setter Property="FontFamily" Value="Kayak Sans" />
-    </Style>
-
-    <Style x:Key="DefaultTabItem" TargetType="TabItem">
-        <Setter Property="Margin" Value="20,10" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="BorderThickness" Value="0" />
-        <Setter Property="Foreground" Value="White" />
-        <Setter Property="FontSize" Value="20" />
-        <Setter Property="Height" Value="40" />
-        <Setter Property="Width" Value="100" />
-        <Setter Property="Padding" Value="0" />
     </Style>
 
     <Style x:Key="DefaultTextBlock" TargetType="TextBlock">
@@ -250,6 +240,76 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style
+        x:Key="AuthorizationTextBox"
+        BasedOn="{StaticResource MaterialDesignTextBox}"
+        TargetType="TextBox">
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="CaretBrush" Value="{DynamicResource PurpleC}" />
+        <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="{DynamicResource PurpleC}" />
+        <Setter Property="FontFamily" Value="Kayak Sans" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="SelectionBrush" Value="{DynamicResource PurpleC}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsSuccessd}" Value="True">
+                <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="{DynamicResource PurpleC}" />
+                <Setter Property="BorderBrush" Value="White" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsSuccessd}" Value="False">
+                <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="Red" />
+                <Setter Property="BorderBrush" Value="Red" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style
+        x:Key="AuthorizationPasswordBox"
+        BasedOn="{StaticResource MaterialDesignPasswordBox}"
+        TargetType="PasswordBox">
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="materialDesign:HintAssist.Hint" Value="*****************************" />
+        <Setter Property="CaretBrush" Value="{DynamicResource PurpleC}" />
+        <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="{DynamicResource PurpleC}" />
+        <Setter Property="FontFamily" Value="Kayak Sans" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="SelectionBrush" Value="{DynamicResource PurpleC}" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsSuccessd}" Value="True">
+                <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="{DynamicResource PurpleC}" />
+                <Setter Property="BorderBrush" Value="White" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsSuccessd}" Value="False">
+                <Setter Property="materialDesign:TextFieldAssist.UnderlineBrush" Value="Red" />
+                <Setter Property="BorderBrush" Value="Red" />
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="AuthorizationErrorLabel" TargetType="Label">
+        <Setter Property="Margin" Value="0, 0, 0, 10" />
+        <Setter Property="Visibility" Value="Hidden" />
+        <Setter Property="FontFamily" Value="Kayak Sans" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Height" Value="30" />
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsSuccessd}" Value="True">
+                <Setter Property="Visibility" Value="Hidden" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding IsSuccessd}" Value="False">
+                <Setter Property="Visibility" Value="Visible" />
+                <Setter Property="Foreground" Value="Red" />
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
 
 </ResourceDictionary>

@@ -17,8 +17,6 @@ namespace FilmCatalog.ViewModels
         private RelayCommand _logoutCommand;
         private User _currentUser;
 
-        public DataStore DataStore { get; set; }
-
         public User CurrentUser
         {
             get => _currentUser;

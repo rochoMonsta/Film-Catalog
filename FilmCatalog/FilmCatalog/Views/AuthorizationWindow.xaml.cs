@@ -54,5 +54,14 @@ namespace FilmCatalog.Views
                 this.Close();
             }
         }
+
+        private void TabControlSelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            _authorizationViewModel.IsSuccessd = true;
+            _authorizationViewModel.ClearData();
+            passwordLoginBox.Password = null;
+            passwordRegisterBox.Password = null;
+            confirmPasswordRegisterBox.Password = null;
+        }
     }
 }

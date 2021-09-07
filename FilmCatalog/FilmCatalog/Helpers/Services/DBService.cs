@@ -24,7 +24,7 @@ namespace FilmCatalog.Helpers.Services
         {
             if (!_applicationContext.Users.Any(u => u.Login == login))
             {
-                _applicationContext.Users.Add(new User() { Login = login, Password = password });
+                _applicationContext.Users.Add(new User() { Login = login, Password = password, UserName = login });
                 _applicationContext.SaveChanges();
 
                 return true;
