@@ -91,27 +91,30 @@ namespace FilmCatalog.ViewModels
 
         private void RegisterUser(object obj)
         {
-            if (UserPassword.ToLower() == ConfrimUserPassword.ToLower())
+            if (string.IsNullOrEmpty(UserLogin) || string.IsNullOrEmpty(UserPassword) || string.IsNullOrEmpty(ConfrimUserPassword))
             {
-                if (_dataBaseService.RegisterUser(UserLogin, UserPassword))
+                if (UserPassword.ToLower() == ConfrimUserPassword.ToLower())
                 {
-                    var user = _dataBaseService.GetUser(UserLogin, UserPassword);
-
-                    if (user != null)
+                    if (_dataBaseService.RegisterUser(UserLogin, UserPassword))
                     {
-                        IsSuccessd = true;
-                        DataStore.GetDataStore().CurrentUser = user;
+                        var user = _dataBaseService.GetUser(UserLogin, UserPassword);
+
+                        if (user != null)
+                        {
+                            IsSuccessd = true;
+                            DataStore.GetDataStore().CurrentUser = user;
+                        }
+                        else
+                        {
+                            ErrorLabelText = (string)Application.Current.Resources["AuthorizationErrorThisUserIsAlreadyRegistered"];
+                            IsSuccessd = false;
+                        }
                     }
                     else
                     {
                         ErrorLabelText = (string)Application.Current.Resources["AuthorizationErrorThisUserIsAlreadyRegistered"];
                         IsSuccessd = false;
                     }
-                }
-                else
-                {
-                    ErrorLabelText = (string)Application.Current.Resources["AuthorizationErrorThisUserIsAlreadyRegistered"];
-                    IsSuccessd = false;
                 }
             }
         }
