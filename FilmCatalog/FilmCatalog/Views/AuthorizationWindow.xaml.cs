@@ -34,6 +34,7 @@ namespace FilmCatalog.Views
             if (_authorizationViewModel.IsSuccessd)
             {
                 var mainWindow = new MainWindow();
+                ((MainViewModel)mainWindow.DataContext).GetData();
                 mainWindow.Show();
                 this.Close();
             }
@@ -48,6 +49,7 @@ namespace FilmCatalog.Views
             if (_authorizationViewModel.IsSuccessd)
             {
                 var mainWindow = new MainWindow();
+                ((MainViewModel)mainWindow.DataContext).GetData();
                 mainWindow.Show();
                 this.Close();
             }

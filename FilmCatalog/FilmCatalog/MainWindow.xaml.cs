@@ -30,6 +30,7 @@ namespace FilmCatalog
         private void Logout()
         {
             var authorizationWindow = new AuthorizationWindow();
+            ((AuthorizationViewModel)authorizationWindow.DataContext).GetData();
             authorizationWindow.Show();
             this.Close();
         }

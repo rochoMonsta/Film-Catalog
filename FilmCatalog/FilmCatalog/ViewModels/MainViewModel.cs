@@ -1,4 +1,5 @@
 ﻿using FilmCatalog.Helpers;
+using FilmCatalog.Helpers.Interfaces;
 using FilmCatalog.Models;
 using GalaSoft.MvvmLight;
 using System;
@@ -6,11 +7,11 @@ using System.Windows;
 
 namespace FilmCatalog.ViewModels
 {
-    class MainViewModel : ViewModelBase
+    class MainViewModel : ViewModelBase, IBaseViewModel
     {
         public Action OnLogout;
 
-        private ViewModelBase _selectedViewModel;
+        private IBaseViewModel _selectedViewModel;
         private RelayCommand _updateViewCommand;
         private RelayCommand _shutDownApplicationCommand;
         private RelayCommand _logoutCommand;
@@ -24,10 +25,18 @@ namespace FilmCatalog.ViewModels
             set => Set(ref _currentUser, value);
         }
 
-        public ViewModelBase SelectedViewModel
+        public IBaseViewModel SelectedViewModel
         {
             get => _selectedViewModel;
-            set => Set(ref _selectedViewModel, value);
+            set
+            {
+                Set(ref _selectedViewModel, value);
+
+                if (value != null)
+                {
+                    value.GetData();
+                }
+            }
         }
 
         public MainViewModel()
@@ -66,5 +75,20 @@ namespace FilmCatalog.ViewModels
         }
 
         private void SetHomePage(object commandParameter) => SelectedViewModel = new UserFilmsViewModel();
+
+        public void GetData()
+        {
+            CurrentUser = DataStore.GetDataStore().CurrentUser;
+        }
+
+        public void SaveData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DiscardData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

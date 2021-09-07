@@ -1,4 +1,5 @@
 ﻿using FilmCatalog.Helpers;
+using FilmCatalog.Helpers.Interfaces;
 using FilmCatalog.Helpers.Services;
 using FilmCatalog.Models;
 using GalaSoft.MvvmLight;
@@ -6,7 +7,7 @@ using System.Windows;
 
 namespace FilmCatalog.ViewModels
 {
-    class AuthorizationViewModel : ViewModelBase
+    class AuthorizationViewModel : ViewModelBase, IBaseViewModel
     {
         private bool _isSuccessd = false;
         private string _userLogin;
@@ -79,6 +80,28 @@ namespace FilmCatalog.ViewModels
                     }
                 }
             }
+        }
+
+        private void ClearData()
+        {
+            UserLogin = null;
+            UserPassword = null;
+            ConfrimUserPassword = null;
+        }
+
+        public void GetData()
+        {
+            ClearData();
+        }
+
+        public void SaveData()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void DiscardData()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
