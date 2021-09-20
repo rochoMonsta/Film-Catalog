@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:viewmodels="clr-namespace:FilmCatalog.ViewModels"
     xmlns:views="clr-namespace:FilmCatalog.Views">
-    
+
     <DataTemplate DataType="{x:Type viewmodels:UserFilmsViewModel}">
         <views:UserFilmsView />
     </DataTemplate>
@@ -11,5 +11,5 @@
     <DataTemplate DataType="{x:Type viewmodels:AuthorizationViewModel}">
         <views:AuthorizationWindow />
     </DataTemplate>
-    
+
 </ResourceDictionary>

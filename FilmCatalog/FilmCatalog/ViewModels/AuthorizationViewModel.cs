@@ -91,7 +91,7 @@ namespace FilmCatalog.ViewModels
 
         private void RegisterUser(object obj)
         {
-            if (string.IsNullOrEmpty(UserLogin) || string.IsNullOrEmpty(UserPassword) || string.IsNullOrEmpty(ConfrimUserPassword))
+            if (!string.IsNullOrEmpty(UserLogin) && !string.IsNullOrEmpty(UserPassword) && !string.IsNullOrEmpty(ConfrimUserPassword))
             {
                 if (UserPassword.ToLower() == ConfrimUserPassword.ToLower())
                 {
@@ -116,6 +116,11 @@ namespace FilmCatalog.ViewModels
                         IsSuccessd = false;
                     }
                 }
+            }
+            else
+            {
+                ErrorLabelText = (string)Application.Current.Resources["AuthorizationErrorYouHaveEmptyFields"];
+                IsSuccessd = false;
             }
         }
 

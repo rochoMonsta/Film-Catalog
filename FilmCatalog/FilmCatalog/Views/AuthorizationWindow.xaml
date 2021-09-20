@@ -68,11 +68,12 @@
                                 Kind="Lock" />
                             <PasswordBox
                                 Name="passwordLoginBox"
+                                PasswordChanged="passwordLoginBoxPasswordChanged"
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"
                                 Style="{StaticResource AuthorizationPasswordBox}"
-                                ToolTip="{DynamicResource AuthorizationUserPasswordHint}" />
+                                ToolTip="{DynamicResource AuthorizationUserPasswordHint}" Cursor="IBeam" />
                         </StackPanel>
                         <StackPanel HorizontalAlignment="Center">
                             <Label Content="{Binding ErrorLabelText}" Style="{StaticResource AuthorizationErrorLabel}" />
@@ -120,6 +121,7 @@
                                 Kind="Lock" />
                             <PasswordBox
                                 Name="passwordRegisterBox"
+                                PasswordChanged="passwordRegisterBoxPasswordChanged"
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"
@@ -134,6 +136,7 @@
                                 Kind="LockCheck" />
                             <PasswordBox
                                 Name="confirmPasswordRegisterBox"
+                                PasswordChanged="confirmPasswordRegisterBoxPasswordChanged"
                                 Width="405"
                                 Height="35"
                                 Margin="10,0"

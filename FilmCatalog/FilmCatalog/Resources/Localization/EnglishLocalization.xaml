@@ -18,6 +18,7 @@
     <sys:String x:Key="AuthorizationUserCloseButtonToolTip">Close</sys:String>
     <sys:String x:Key="AuthorizationErrorThisUserIsAlreadyRegistered">This user is already registered</sys:String>
     <sys:String x:Key="AuthorizationErrorIncorrectUsernameOrPassword">Incorrect username or password</sys:String>
+    <sys:String x:Key="AuthorizationErrorYouHaveEmptyFields">You have empty fields</sys:String>
 
     <sys:String x:Key="MainWindowSettings">Settings</sys:String>
     <sys:String x:Key="MainWindowAccount">Account</sys:String>

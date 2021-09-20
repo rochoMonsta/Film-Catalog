@@ -28,7 +28,6 @@ namespace FilmCatalog.Views
 
         private void LoginButtonClick(object sender, RoutedEventArgs e)
         {
-            _authorizationViewModel.UserPassword = passwordLoginBox.Password;
             _authorizationViewModel.LoginCommand.Execute(null);
 
             if (_authorizationViewModel.IsSuccessd)
@@ -42,8 +41,6 @@ namespace FilmCatalog.Views
 
         private void RegisterButtonClick(object sender, RoutedEventArgs e)
         {
-            _authorizationViewModel.UserPassword = passwordRegisterBox.Password;
-            _authorizationViewModel.ConfrimUserPassword = confirmPasswordRegisterBox.Password;
             _authorizationViewModel.RegisterCommand.Execute(null);
 
             if (_authorizationViewModel.IsSuccessd)
@@ -62,6 +59,21 @@ namespace FilmCatalog.Views
             passwordLoginBox.Password = null;
             passwordRegisterBox.Password = null;
             confirmPasswordRegisterBox.Password = null;
+        }
+
+        private void passwordLoginBoxPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            _authorizationViewModel.UserPassword = passwordLoginBox.Password;
+        }
+
+        private void confirmPasswordRegisterBoxPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            _authorizationViewModel.ConfrimUserPassword = confirmPasswordRegisterBox.Password;
+        }
+
+        private void passwordRegisterBoxPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            _authorizationViewModel.UserPassword = passwordRegisterBox.Password;
         }
     }
 }
