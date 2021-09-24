@@ -1,6 +1,6 @@
 ﻿namespace FilmCatalog.Models
 {
-    class UserFilms : DomainObject
+    public class UserFilms : DomainObject
     {
         private int _userId;
         private int _filmId;

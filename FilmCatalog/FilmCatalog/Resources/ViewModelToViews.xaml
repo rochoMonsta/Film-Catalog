@@ -12,4 +12,8 @@
         <views:AuthorizationWindow />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type viewmodels:FriednsViewModel}">
+        <views:FriendsView />
+    </DataTemplate>
+
 </ResourceDictionary>

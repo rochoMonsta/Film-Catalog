@@ -2,7 +2,7 @@
 
 namespace FilmCatalog.Models
 {
-    class Film : DomainObject
+    public class Film : DomainObject
     {
         private string _name;
         private string _description;

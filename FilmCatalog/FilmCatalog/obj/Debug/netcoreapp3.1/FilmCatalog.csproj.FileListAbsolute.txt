@@ -1,9 +1,5 @@
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.exe
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.deps.json
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.runtimeconfig.json
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.runtimeconfig.dev.json
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.dll
-G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.pdb
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\CommonServiceLocator.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\Dragablz.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
@@ -57,6 +53,7 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Resou
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Resources\PageStyles.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Views\AuthorizationWindow.g.cs
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Views\FriendsView.g.cs
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Views\UserFilmsView.g.cs
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\App.g.cs
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
@@ -65,6 +62,7 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmC
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\App.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Resources\ViewModelToViews.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Views\AuthorizationWindow.baml
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Views\FriendsView.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\Views\UserFilmsView.baml
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.g.resources
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.AssemblyInfoInputs.cache
@@ -73,5 +71,10 @@ G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmC
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.csproj.CopyComplete
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.dll
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.pdb
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.deps.json
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.runtimeconfig.json
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.runtimeconfig.dev.json
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\FilmCatalog.pdb
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.genruntimeconfig.cache
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\obj\Debug\netcoreapp3.1\FilmCatalog.csproj.AssemblyReference.cache
+G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\bin\Debug\netcoreapp3.1\EntityFramework.dll

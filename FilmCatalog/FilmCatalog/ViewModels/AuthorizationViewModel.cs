@@ -81,6 +81,7 @@ namespace FilmCatalog.ViewModels
             {
                 IsSuccessd = true;
                 DataStore.GetDataStore().CurrentUser = user;
+                DataStore.GetDataStore().GenericRepository = new GenericRepository(new ApplicationContext());
             }
             else
             {

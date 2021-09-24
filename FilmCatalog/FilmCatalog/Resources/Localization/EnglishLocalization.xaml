@@ -25,5 +25,7 @@
     <sys:String x:Key="MainWindowHelp">Help</sys:String>
     <sys:String x:Key="MainWindowLogout">Logout</sys:String>
     <sys:String x:Key="MainWindowExit">Exit</sys:String>
+    <sys:String x:Key="MainWindowHome">Home</sys:String>
+    <sys:String x:Key="MainWindowFriedns">Friends</sys:String>
 
 </ResourceDictionary>

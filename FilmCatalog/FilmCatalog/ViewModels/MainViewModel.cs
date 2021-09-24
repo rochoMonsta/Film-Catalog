@@ -13,6 +13,7 @@ namespace FilmCatalog.ViewModels
 
         private IBaseViewModel _selectedViewModel;
         private RelayCommand _updateViewCommand;
+        private RelayCommand _friendsViewCommand;
         private RelayCommand _shutDownApplicationCommand;
         private RelayCommand _logoutCommand;
         private User _currentUser;
@@ -52,6 +53,16 @@ namespace FilmCatalog.ViewModels
             }
         }
 
+        public RelayCommand FriendsViewComman
+        {
+            get
+            {
+                return _friendsViewCommand ?? (
+                     _friendsViewCommand = new RelayCommand(SetFriednsPage)
+                     );
+            }
+        }
+
         public RelayCommand ShutDownApplicationCommand
         {
             get
@@ -73,6 +84,7 @@ namespace FilmCatalog.ViewModels
         }
 
         private void SetHomePage(object commandParameter) => SelectedViewModel = new UserFilmsViewModel();
+        private void SetFriednsPage(object commandParameter) => SelectedViewModel = new FriednsViewModel();
 
         public void GetData()
         {
@@ -85,6 +97,11 @@ namespace FilmCatalog.ViewModels
         }
 
         public void DiscardData()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ClearData()
         {
             throw new NotImplementedException();
         }

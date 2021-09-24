@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 G:\All\GitHub\Film-Catalog\FilmCatalog\FilmCatalog\App.xaml
-7444011585
+8-2129940897
 
-20662677844
-226833428371
-MainWindow.xaml;Resources\ColorsResources.xaml;Resources\Localization\EnglishLocalization.xaml;Resources\PageStyles.xaml;Resources\ViewModelToViews.xaml;Views\AuthorizationWindow.xaml;Views\UserFilmsView.xaml;
+24-612504868
+227-1481602822
+MainWindow.xaml;Resources\ColorsResources.xaml;Resources\Localization\EnglishLocalization.xaml;Resources\PageStyles.xaml;Resources\ViewModelToViews.xaml;Views\AuthorizationWindow.xaml;Views\FriendsView.xaml;Views\UserFilmsView.xaml;
 
 False
 

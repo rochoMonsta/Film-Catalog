@@ -2,11 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 namespace FilmCatalog.Models
 {
-    class ApplicationContext : DbContext
+    public class ApplicationContext : DbContext
     {
         public DbSet<Film> Films { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserFilms> UserFilms { get; set; }
+        public DbSet<Friends> Friends { get; set; }
 
         public ApplicationContext()
         {
@@ -27,6 +28,19 @@ namespace FilmCatalog.Models
                 .HasOne(sc => sc.User)
                 .WithMany(c => c.UserFilms)
                 .HasForeignKey(sc => sc.UserId);
+
+            //modelBuilder.Entity<Friends>()
+            //    .HasKey(sc => new { sc.FirstUser, sc.SecondUser, sc.FriendsRelationshipStatus });
+
+            //modelBuilder.Entity<Friends>()
+            //    .HasOne(sc => sc.FirstUser)
+            //    .WithMany(c => c.UserFriends)
+            //    .HasForeignKey(sc => sc.FirstUserId);
+
+            //modelBuilder.Entity<Friends>()
+            //    .HasOne(sc => sc.SecondUser)
+            //    .WithMany(c => c.UserFriends)
+            //    .HasForeignKey(sc => sc.SecondUserId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

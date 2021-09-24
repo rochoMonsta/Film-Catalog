@@ -9,5 +9,6 @@ namespace FilmCatalog.Helpers.Interfaces
         public void GetData();
         public void SaveData();
         public void DiscardData();
+        public void ClearData();
     }
 }

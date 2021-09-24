@@ -249,14 +249,33 @@
                                 </Grid.ColumnDefinitions>
                                 <materialDesign:PackIcon
                                     Grid.Column="0"
-                                    Foreground="{DynamicResource PurpleC}"
                                     Kind="home"
                                     Style="{StaticResource NavMenuIcon}" />
                                 <TextBlock
                                     Grid.Column="1"
-                                    Foreground="{DynamicResource PurpleC}"
                                     Style="{StaticResource NavManuTextBlock}"
-                                    Text="Home" />
+                                    Text="{DynamicResource MainWindowHome}" />
+                            </Grid>
+                        </Button>
+                    </ListViewItem>
+                    <ListViewItem x:Name="ItemFriends" Height="60">
+                        <Button
+                            Width="180"
+                            Command="{Binding FriendsViewComman}"
+                            Style="{StaticResource DefaultButton}">
+                            <Grid Width="180" HorizontalAlignment="Left">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.25*" />
+                                    <ColumnDefinition Width="0.75*" />
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon
+                                    Grid.Column="0"
+                                    Kind="GroupAdd"
+                                    Style="{StaticResource NavMenuIcon}" />
+                                <TextBlock
+                                    Grid.Column="1"
+                                    Style="{StaticResource NavManuTextBlock}"
+                                    Text="{DynamicResource MainWindowFriedns}" />
                             </Grid>
                         </Button>
                     </ListViewItem>

@@ -2,7 +2,7 @@
 
 namespace FilmCatalog.Models
 {
-    class DomainObject : ViewModelBase
+    public class DomainObject : ViewModelBase
     {
         private int _id;
 

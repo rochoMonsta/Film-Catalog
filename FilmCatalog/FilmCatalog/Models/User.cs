@@ -2,11 +2,12 @@
 
 namespace FilmCatalog.Models
 {
-    class User : DomainObject
+    public class User : DomainObject
     {
         private string _login;
         private string _password;
         private string _userName;
+        private bool _isActive = true;
 
         public string Login
         {
@@ -26,11 +27,19 @@ namespace FilmCatalog.Models
             set => Set(ref _userName, value);
         }
 
-        public HashSet<UserFilms> UserFilms { get; set; }
+        public bool IsActive
+        {
+            get => _isActive;
+            set => Set(ref _isActive, value);
+        }
+
+        public virtual HashSet<UserFilms> UserFilms { get; set; }
+        //public virtual HashSet<Friends> UserFriends { get; set; }
 
         public User()
         {
             UserFilms = new HashSet<UserFilms>();
+            //UserFriends = new HashSet<Friends>();
         }
     }
 }

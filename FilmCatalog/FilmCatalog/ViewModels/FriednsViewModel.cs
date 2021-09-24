@@ -1,12 +1,15 @@
-﻿using FilmCatalog.Helpers.Interfaces;
+﻿using FilmCatalog.Helpers;
+using FilmCatalog.Helpers.Interfaces;
+using FilmCatalog.Models;
 using GalaSoft.MvvmLight;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace FilmCatalog.ViewModels
 {
-    class UserFilmsViewModel : ViewModelBase, IBaseViewModel
+    public class FriednsViewModel : ViewModelBase, IBaseViewModel
     {
         public void ClearData()
         {
@@ -18,9 +21,9 @@ namespace FilmCatalog.ViewModels
             
         }
 
-        public void GetData()
+        public async void GetData()
         {
-            
+            var users = await DataStore.GetDataStore().GenericRepository.GetAll<Friends>();
         }
 
         public void SaveData()

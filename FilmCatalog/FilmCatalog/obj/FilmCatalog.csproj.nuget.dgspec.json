@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[0.0.3.203, )"
             },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "MaterialDesignExtensions": {
               "target": "Package",
               "version": "[2.0.1, )"
